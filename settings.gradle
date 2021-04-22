@@ -1,0 +1,5 @@
+rootProject.name = 'auth'
+include('api-grpc')
+include('api-rest')
+include('jwt-auth')
+include('database')
