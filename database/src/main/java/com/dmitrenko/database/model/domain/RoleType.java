@@ -1,4 +1,4 @@
-package com.dmitrenko.database.domain;
+package com.dmitrenko.database.model.domain;
 
 import java.util.Arrays;
 

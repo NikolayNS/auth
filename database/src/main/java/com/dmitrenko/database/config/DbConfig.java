@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import javax.sql.DataSource;
 
 @Configuration
-@EntityScan(basePackages = "com.dmitrenko.database.domain")
+@EntityScan(basePackages = "com.dmitrenko.database.model.domain")
 @EnableJpaRepositories(basePackages = "com.dmitrenko.database.repository")
 public class DbConfig {
 

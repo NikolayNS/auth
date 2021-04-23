@@ -1,4 +1,4 @@
-package com.dmitrenko.database.domain;
+package com.dmitrenko.database.model.domain;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -25,8 +25,8 @@ public class User extends BaseEntity {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "person")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "person", nullable = false)
     private Person person;
 
     @ManyToMany
@@ -34,6 +34,4 @@ public class User extends BaseEntity {
             joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = {@JoinColumn(name = "role_id")})
     private List<Role> roles = Collections.emptyList();
-
-
 }

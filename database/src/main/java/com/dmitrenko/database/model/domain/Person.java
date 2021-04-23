@@ -1,4 +1,4 @@
-package com.dmitrenko.database.domain;
+package com.dmitrenko.database.model.domain;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -32,6 +32,6 @@ public class Person extends BaseEntity {
     @Column(name = "country")
     private String county;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "person", cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "person")
     private User user;
 }
