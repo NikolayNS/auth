@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
         var user = userMapper.from(new Triple<UserAddRequest, Person, List<Role>>()
                 .setLeft(request)
                 .setCentre(personRepository.findById(request.getPersonId())
-                        .orElseThrow())
+                        .orElseThrow(() -> new EntityNotFoundException(String.format("Person %s not found", request.getPersonId()))))
                 .setRight(roleRepository.findAllByRoleTypeValueIn(request.getRoleValues())));
         user = userRepository.saveAndFlush(user);
 
