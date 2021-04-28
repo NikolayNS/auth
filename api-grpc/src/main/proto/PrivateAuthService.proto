@@ -1,0 +1,19 @@
+syntax = "proto3";
+package dmitrenko;
+
+option java_package = "com.dmitrenko.apigrpc";
+
+// **************** Methods *****************
+
+service PrivateAuthService {
+
+
+
+}
+
+// **************** Requests *****************
+
+
+
+// **************** Responses *****************
+
